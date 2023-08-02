@@ -8,7 +8,7 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
 // Create moon mesh
-const moonTexture = new THREE.TextureLoader().load('path-to-your-moon-image.png'); // Replace with the actual path
+const moonTexture = new THREE.TextureLoader().load('FullMoon2010.jpg'); // Replace with the actual path
 const moonGeometry = new THREE.SphereGeometry(5, 32, 32);
 const moonMaterial = new THREE.MeshBasicMaterial({ map: moonTexture });
 const moonMesh = new THREE.Mesh(moonGeometry, moonMaterial);
