@@ -4,14 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Uconn Moon Club</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+    .moon-container {
+      position: relative;
+    }
+    #moon-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  </style>
 </head>
 <body>
-      <h1 style = "color: #262A56">Welcome to the Uconn Moon Club</h1>
-      <p style = "color: #880808">We are not a cult.</p>
+  <h1 style="color: #262A56">Welcome to the Uconn Moon Club</h1>
+  <p style="color: #880808">We are not a cult.</p>
   <div class="moon-container">
     <canvas id="moon-canvas"></canvas>
     <div class="content">
+      <!-- You can add additional content here -->
     </div>
+  </div>
   <script type="module" src="script.js"></script>
 </body>
 </html>
