@@ -8,7 +8,7 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
 // Create moon mesh
-const moonTexture = new THREE.TextureLoader().load('nasa-sourced.jpg'); // Replace with the actual path
+const moonTexture = new THREE.TextureLoader().load('./nasa-sourced.jpg'); // Replace with the actual path
 const moonGeometry = new THREE.SphereGeometry(5, 32, 32);
 const moonMaterial = new THREE.MeshBasicMaterial({ map: moonTexture });
 const moonMesh = new THREE.Mesh(moonGeometry, moonMaterial);
@@ -31,7 +31,7 @@ const animateMoon = () => {
 };
 
 // Load the transparent PNG image as the particle texture
-const particleTexture = new THREE.TextureLoader().load('star.png'); // Replace with the actual path
+const particleTexture = new THREE.TextureLoader().load('./star.png'); // Replace with the actual path
 
 // Create particle system for stars
 const starsGeometry = new THREE.BufferGeometry();
@@ -63,11 +63,13 @@ let interactionDetected = false;
 document.addEventListener('touchstart', () => {
   interactionDetected = true;
   stars.visible = true;
+  console.log('Touch interaction detected');
 });
 
 document.addEventListener('click', () => {
   interactionDetected = true;
   stars.visible = true;
+  console.log('Touch interaction detected');
 });
 
 // Animate the scene
