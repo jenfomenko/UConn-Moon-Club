@@ -8,6 +8,11 @@
     body {
       margin: 0;
       overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: black;
     }
     .moon-container {
       position: relative;
@@ -17,15 +22,23 @@
       top: 0;
       left: 0;
     }
+    .text-container {
+      position: absolute;
+      top: 10px; /* Adjust the vertical position */
+      color: #262A56;
+      text-align: center;
+    }
+    .subtitle {
+      color: #880808;
+    }
   </style>
 </head>
 <body>
-  <h1 style="color: #262A56">Welcome to the Uconn Moon Club</h1>
-  <p style="color: #880808">We are not a cult.</p>
   <div class="moon-container">
     <canvas id="moon-canvas"></canvas>
-    <div class="content">
-      <!-- You can add additional content here -->
+    <div class="text-container">
+      <h1>Welcome to the Uconn Moon Club</h1>
+      <p class="subtitle">We are not a cult.</p>
     </div>
   </div>
   <script type="module" src="script.js"></script>
