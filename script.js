@@ -22,21 +22,6 @@ const wrapAround = new THREE.MeshBasicMaterial({
 const wrapAroundMesh = new THREE.Mesh(moonGeometry, wrapAround);
 scene.add(wrapAroundMesh);
 
-// Set camera position
-camera.position.z = 15;
-
-// Animate moon
-const animate = () => {
-  requestAnimationFrame(animate);
-
-  moonMesh.rotation.y += 0.005; // Rotate the front-side moon mesh
-
-  renderer.render(scene, camera);
-};
-
-animate();
-
-
 // Load the transparent PNG image as the particle texture
 const particleTexture = new THREE.TextureLoader().load('star.png'); // Replace with the actual path
 
@@ -64,9 +49,19 @@ const stars = new THREE.Points(starsGeometry, starsMaterial);
 stars.visible = false;
 scene.add(stars);
 
-// Detect touch or click interaction
-// ... (existing interaction detection code)
+let interactionDetected = false;
 
+document.addEventListener('touchstart', () => {
+  interactionDetected = true;
+  stars.visible = true;
+});
+
+document.addEventListener('click', () => {
+  interactionDetected = true;
+  stars.visible = true;
+});
+
+// Animate the scene
 const animate = () => {
   requestAnimationFrame(animate);
 
@@ -75,6 +70,7 @@ const animate = () => {
   }
 
   moonMesh.rotation.y += 0.005;
+
   renderer.render(scene, camera);
 };
 
