@@ -9,10 +9,11 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center vertically */
-  align-items: center; /* Center horizontally */
-  height: 100vh; /* Ensure the container covers the full viewport height */
+  align-items: center;
   padding: 20px;
+  position: relative;
+  z-index: 1;
+  min-height: 100vh; /* Allow the container to expand if content overflows */
 }
 
 .moon-container {
@@ -51,63 +52,3 @@ canvas {
     font-size: 1rem;
   }
 }
-
-/* ... Previous CSS rules ... */
-
-.background-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.background-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('stars-background.jpg') no-repeat center center fixed; /* Use the path to your stars background image */
-  background-size: cover;
-  opacity: 0.5; /* Adjust the opacity as desired */
-  z-index: -1;
-}
-
-/* ... Previous CSS rules ... */
-
-.background-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.background-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('stars-background.jpg') no-repeat center center fixed; /* Use the path to your stars background image */
-  background-size: cover;
-  opacity: 0.5; /* Adjust the opacity as desired */
-  z-index: -1;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  position: relative;
-  z-index: 1; /* Ensure the main content is above the background */
-}
-
-/* ... Previous CSS rules ... */
-
-
